@@ -11,7 +11,7 @@ class  App extends React.Component {
       dob:'',
       class1:'',
       division:'',
-      gender:'',
+      gender:'Male',
       
     }
   }
@@ -25,7 +25,7 @@ class  App extends React.Component {
         dob:'',
         class1:'',
         division:'',
-        gender:'',
+        gender:'Male',
         
       })
     })
@@ -79,10 +79,9 @@ class  App extends React.Component {
   render(){
     return (
       <div className="container">
-         <div className="row">
-         
-         <div className="col s6">
-           {/*Student Registration part*/}
+        <div className="row">         
+        <div className="col s6">
+        {/*Student Registration part*/}
            
 
           <form onSubmit={(e)=>this.submit(e,this.state.id)}>
@@ -143,13 +142,13 @@ class  App extends React.Component {
                   <div className="input-field col right s8">                        
                   <p>
                     <label>
-                      <input name="group1" type="radio" value={this.state.gender} onChange={(e)=>this.setState({division:e.target.value})} checked />
+                      <input type="radio" className="with-gap" name="group3" id="autocomplete-input" value={this.state.gender} onChange={(e)=>this.setState({gender:e.target.value})}  />
                       <span>Male</span>
                     </label>
                   </p>    
                   <p>
                     <label>
-                      <input name="group1" type="radio" value={this.state.gender} onChange={(e)=>this.setState({gender:e.target.value})} checked />
+                      <input type="radio" className="with-gap" name="group3" id="autocomplete-input" value={this.state.gender} onChange={(e)=>this.setState({gender:e.target.value})}  />
                       <span>Female</span>
                     </label>
                   </p>    
@@ -172,8 +171,7 @@ class  App extends React.Component {
               <th>Date of Birth</th>
               <th>Class</th>
               <th>Division</th>
-              <th>Gender</th>              
-              
+              <th>Gender</th>           
               <th>Delete</th>
           </tr>
         </thead>
